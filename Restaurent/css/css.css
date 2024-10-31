@@ -1,0 +1,702 @@
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: #161616 ;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+/* /* navigation */
+section{
+    width: 100%;
+    height: 100px;
+}
+section nav img{
+    margin-top: 5px;
+    height: 50px;
+    width: 80px;
+}
+
+section nav{
+    display: flex;
+    height: 50px;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    right: 0;
+    left: 0;
+    background: rgb(42, 39, 39);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    z-index: 1;
+}
+
+section nav ul{
+    list-style: none;  
+}
+
+section nav ul li{
+    display: inline-block;
+    margin: 0 15px
+}
+
+section nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-weight: 200;
+    font-size: 15px;
+    transition: 0.1s;
+}
+
+section nav ul li a::after{
+    content:'';
+    width: 0;
+    height: 2px;
+    background:yellow;
+    display: block;
+    transition: 0.2s linear;
+
+}
+section nav ul li a:hover:after{
+    width:100%
+
+}section nav button{
+    padding: 20px;
+    border: none;
+    font-weight: 200;
+    background-color: transparent;
+    color: white;
+    font-size: 15px;
+    transition: 0.1s;
+
+}
+section nav button::after{
+    content: '';
+    width: 0;
+    height: 2px;
+    background: yellow;
+    display: block;
+    transition: 0.2s linear;
+}
+section nav button:hover::after{
+    width:100%;
+}
+
+ section .main{
+    display:flex;
+    justify-content: space-around;
+    position: relative;
+    top:130px;
+ }
+ section .main .text h6{
+    margin-left: 30px;
+    margin-top: 160px;
+    font-size: 30px;
+    position: relative;
+    color: white;
+    
+ }
+ section .main .text span{
+    color: yellow;
+    margin-left: 15px;
+    font-family: mv boli;
+    line-height: 22px;
+    font-size: 70px;
+ }
+section .main .text p{
+    color: white;
+    font-size: 20px;
+}
+/* about */
+.abt{
+    margin-top: 100px;
+}
+.abt div h1{
+    color: yellow;
+    margin-left: 70%;
+    font-family: mv boli;
+    line-height: 22px;
+    font-size: 70px;
+}
+.abt div h3{
+    color: white;
+    margin-left: 85%;
+}
+.abt div p{
+    color: white;
+    margin-top: 30px;
+    margin-left: 55%;
+    text-align: justify;
+    width: 40%;
+}
+.imgabt{
+    width: 100px;
+    height: 100px;
+}
+.imgabt img{
+    width:800px;
+    height: 600px;
+}
+/* menu */
+.menu{
+    width: 100%;
+    padding: 70px 0;
+}
+
+.menu h1{
+    font-size: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    color: white;
+}
+
+.menu h1 span{
+    color: #fac031;
+    margin-left: 15px;
+    font-family: mv boli;
+}
+
+
+.menu .menu_box{
+    width: 95%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 15px;
+}
+
+.menu .menu_box .menu_card{
+    width: 325px;
+    height: 480px;
+    padding-top: 10px;
+    margin-bottom: 20px;
+}
+
+.menu .menu_box .menu_card .menu_image{
+    width: 300px;
+    height: 245px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.menu .menu_box .menu_card .menu_image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: 0.3s;
+}
+
+.menu .menu_box .menu_card .menu_image:hover img{
+    transform: scale(1.1);
+}
+
+.menu .menu_box .menu_card .small_card{
+    width: 45px;
+    height: 45px;
+    float: right;
+    position: relative;
+    top: -240px;
+    right: -8px;
+    opacity: 0;
+    border-radius: 7px;
+    transition: 0.3s;
+}
+
+.menu .menu_box .menu_card:hover .small_card{
+    position: relative;
+    top: -240px;
+    right: 20px;
+    opacity: 1;
+}
+
+.menu .menu_box .menu_card .menu_info h2{
+    width: 60%;
+    text-align: center;
+    margin: 10px auto 10px auto;
+    font-size: 25px;
+    color: #fac031;
+}
+
+.menu .menu_box .menu_card .menu_info p{
+    color: white;
+    text-align: center;
+    margin-top: 8px;
+    line-height: 21px;
+}
+
+.menu .menu_box .menu_card .menu_info h3{
+    color: red;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.menu .menu_box .menu_card .menu_info .menu_btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: black;
+    background: yellow;
+    padding: 8px 10px;
+    margin: 0 80px;
+    transition: 0.3s;
+}
+/*Gallary*/
+
+.gallary{
+    width: 100%;
+    padding: 70px 0;
+}
+
+.gallary h1{
+    color: white;
+    font-size: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gallary h1 span{
+    margin-left: 15px;
+    color: #fac031;
+    font-family: mv boli;
+}
+
+.gallary .gallary_image_box{
+    width: 95%;
+    margin: 10px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+}
+
+.gallary .gallary_image_box .gallary_image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: black;
+    overflow: hidden;
+}
+
+.gallary .gallary_image_box .gallary_image img{
+    width: 100%;
+    transition: .3s;
+}
+
+.gallary .gallary_image_box .gallary_image:hover img{
+    opacity: 0.4;
+    transform: scale(1.1);
+}
+
+.gallary .gallary_image_box .gallary_image h3{
+    position: absolute;
+    font-size: 35px;
+    margin-bottom: 130px;
+    color: #fac031;
+    font-family: polo;
+    z-index: 5;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.gallary .gallary_image_box .gallary_image:hover h3{
+    opacity: 1;
+}
+
+.gallary .gallary_image_box .gallary_image p{
+    position: absolute;
+    width: 400px;
+    margin-top: 30px;
+    text-align: center;
+    color: white;
+    line-height: 22px;
+    opacity: 0;
+    z-index: 5;
+    transition: 0.3s;
+}
+
+.gallary .gallary_image_box .gallary_image:hover p{
+    opacity: 1;
+}
+
+.gallary .gallary_image_box .gallary_image .gallary_btn{
+    position: absolute;
+    margin-top: 180px;
+    color: #000;
+    background: #fac031;
+    padding: 7px 25px;
+    text-decoration: none;
+    opacity: 0;
+    transform: translateY(45px);
+    z-index: 5;
+    transition: 0.3s;
+}
+
+.gallary .gallary_image_box .gallary_image:hover .gallary_btn{
+    opacity: 1;
+    transform: translateY(0);
+}
+.offers{
+    width: 100%;
+    height: 90vh;
+    
+}
+/* offer */
+.offer {
+    margin-top: 800px;
+    height: 800px;
+}
+.offer h1{
+    color: yellow;
+    text-align: center;
+    font-family: mv boli;
+    line-height: 70px;
+    font-size: 70px;
+}
+.offers .offer_box{
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 13%;
+}
+
+.offers .offer_box .dis{
+    width: 320px;
+    height: 320px;
+    background: rgb(42, 39, 39);
+    border-radius: 50%;
+    margin: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    box-shadow: 0 0 20px white;
+    transition: 0.4s;
+}
+
+.offers .offer_box .dis:hover{
+    border-radius: 20px;
+    height: 320px;
+}
+
+.offers .offer_box .dis img{
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 2;
+    transition: 0.4s;
+}
+
+.offers .offer_box .dis:hover img{
+    border-radius: 20px;
+    margin-top: -230px;
+}
+
+.offers .offer_box .dis .info{
+    position: absolute;
+    text-align: center;
+    top: 25%;
+    color: rgb(42, 39, 39);
+    transition: 0.4s;
+}
+
+.offers .offer_box .dis:hover .info{
+    top: 60%;
+    color: white;
+}
+
+.offers .offer_box .dis .info .name{
+    color: RED;
+    margin-bottom: 15px;
+}
+
+.offers .offer_box .dis .info .bio{
+    width: 70%;
+    text-align: center;
+    margin: 0 auto 10px auto;
+}
+/*Footer*/
+
+footer{
+    width: 100%;
+    padding: 30px 0 0 20px;
+    background: #474343;
+}
+
+footer .footer_main{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+footer .footer_main .footer_tag{
+    text-align: center;
+}
+
+footer .footer_main .footer_tag h2{
+    color: #000;
+    margin-bottom: 25px;
+    font-size: 30px;
+}
+
+footer .footer_main .footer_tag p{
+    margin: 10px 0;
+}
+footer .footer_main .footer_tag a{
+    text-decoration: none;
+    color: black;
+}
+footer .end{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+}
+
+footer .end span{
+    color: #fac031;
+    margin-left: 10px;
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track{
+    border-radius: 2px;
+    box-shadow:0 0 5px rgba(0,0,0,0.5);
+}
+
+::-webkit-scrollbar-thumb{
+    background: #fac031;
+    border-radius: 10px;
+}
+/* login signup */
+.signup-box {
+    color: white;    
+    width: 360px;
+    height: 520px;
+    margin-top: 100px;
+    margin-left: 40%;
+    background-color: rgb(42, 39, 39);
+    border-radius: 20px;
+  }
+  
+  .login-box {
+    color: white;
+    width: 360px;
+    height: 280px;
+    margin-top: 150px;
+    margin-left: 40%;
+    border-radius: 3px;
+    background-color: rgb(42, 39, 39);
+    border-radius: 20px;
+  }
+  
+h1 {
+    text-align: center;
+    padding-top: 15px;
+  } 
+  
+h4 {
+    text-align: center;
+  } 
+  
+  form {
+    width: 300px;
+    margin-left: 20px;
+  }
+  
+  form label {
+    display: flex;
+    margin-top: 20px;
+    font-size: 18px;
+  }
+  
+  form input {
+    width: 100%;
+    padding: 7px;
+    border: none;
+    color: black;
+    border: 1px solid grey;
+    border-radius: 6px;
+    outline: none;
+  }
+  input[type="submit"] {
+    width: 300px;
+    height: 35px;
+    margin-top: 20px;
+    border: none;
+    background-color:yellow;
+    color: black;
+    font-size: 18px;
+  }
+.signup-box  p {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 15px;
+  }
+  .para-2 {
+    text-align: center;
+    color: white;
+    font-size: 15px;
+    margin-top: 10px;
+    margin-bottom: 100px;
+  }
+  .para-2 a {
+    color: yellow;
+  }/* contactus */
+  .contact-section{
+    padding: 40px 0;
+  }
+  .contact-section h1{
+    text-align: center;
+    color:white;
+  }
+  
+  .contact-form{
+    margin-left: 35%;
+    background-color:rgb(42, 39, 39);
+    width: 540px;
+    height: 500px;
+    border-radius: 30px;
+    padding:  10px;
+    overflow: hidden;
+  }
+  
+  .contact-form-text{
+    
+    display: block;
+    font-size: 20px;
+    border-radius: 20px;
+    width: 500px;
+    margin-left: 10px;
+    margin-top: 16px;
+    border: 0;
+    background: rgb(120, 109, 109);
+    padding: 20px 40px;
+    outline: none;
+    color: white;
+   }
+   ::placeholder{
+    color: white;
+    font-size: 20px;
+   }
+  .contact-form-text:focus{
+    box-shadow: 0 0 10px 4px yellow;
+  }
+  textarea.contact-form-text{
+    resize: none;
+    height: 120px;
+  }
+  .contact-form-btn{
+    
+    margin-left: 20%;
+    border: 0;
+    width: 50px;
+    padding: 1px 0px;
+    border-radius:20px;
+    cursor: pointer;
+  }
+/*health*/
+.health{
+    width: 100%;
+    height: 100vh;
+    padding: 70px 0;
+    margin-bottom: 100px;
+}
+
+.health h1{
+    font-size: 55px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.health h1 span{
+    margin-left: 15px;
+    color: #fac031;
+    font-family: mv boli;
+}
+
+.health .health_box{
+    width: 95%;
+    margin: 70px auto;
+    display: flex;
+}
+
+.health .health_box .health_card{
+    width: 350px;
+    height: 535px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+    background-color: #474343;
+    border-radius: 8px;
+    padding: 8px 20px;
+    margin: 0 8px;
+}
+
+.health .health_box .health_card .health_profile{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: 0.3s;
+}
+
+.health .health_box .health_card:hover .health_profile{
+    transform: translateY(-60px);
+}
+
+.health .health_box .health_card .health_profile img{
+    width: 180px;
+    height: 180px;
+    box-shadow: 0 0 10px white;
+    object-fit: cover;
+    object-position: center;
+    
+    border-radius: 50%;
+}
+
+.health .health_box .health_card .health_text{
+    text-align: center;
+}
+.health .health_box .health_card .health_text .health_social h2{
+    margin: 5px 1px;
+    font-size: 30px;
+    margin-top: -50px;
+    color: #fac031;
+    opacity: 0;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.health .health_box .health_card:hover .health_text .health_social h2{
+    opacity: 1;
+    transform: translateY(-8px);
+}
+
+.health .health_box .health_card .health_text p{
+    text-align: center;
+    line-height: 22px;
+    transition: 0.3s;
+    margin-top: 20px;
+}
+
+.health .health_box .health_card:hover .health_text p{
+    margin-top: 5px;
+}
+ 
